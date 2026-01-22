@@ -29,3 +29,4 @@ export const KAFKA_TOPICS = {
 } as const;
 
 export type KafkaTopics = typeof KAFKA_TOPICS[keyof typeof KAFKA_TOPICS];
+//is a way of extracting a union type from the values of an object.
