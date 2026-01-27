@@ -1,4 +1,4 @@
-export const KAFKA_BROKERS = process.env.KAFKA_BROKERS ?? 'localhost:9092'
+export const KAFKA_BROKERS = process.env.KAFKA_BROKERS ?? 'localhost:9093'
 export const KAFKA_CLIENT_ID = 'eventflowapp'
 export const KAFKA_CONSUMER_GROUP = 'eventflowapp-consumer'
 
