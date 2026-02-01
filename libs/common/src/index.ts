@@ -4,3 +4,5 @@ export * from './common.service';
 //
 export * from './interfaces';
 export * from './constants';
+
+export * from './dto';
