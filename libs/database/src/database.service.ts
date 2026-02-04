@@ -9,8 +9,10 @@ export class DatabaseService {
     private pool:Pool;
     public db: NodePgDatabase<typeof schema>
 
+    //'postgresql://eventflow:eventflow_password@locahost:5432/eventflowdb?schema=public
     constructor() {
-        const connectionString = process.env.DATABASE_URL!;
+        // const connectionString = process.env.DATABASE_URL!;
+        const connectionString = 'postgresql://eventflow:eventflow_password@locahost:5432/eventflowdb?schema=public';
 
         this.pool = new Pool({ connectionString});
         this.db = drizzle(this.pool, { schema });
