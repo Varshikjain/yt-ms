@@ -1,0 +1,31 @@
+import { IsDateString, IsInt, IsNotEmpty, IsOptional, IsString, MaxLength, Min } from "class-validator";
+
+export class CreateEventDto {
+    @IsString({ message: 'Title must be a string' })
+    @IsNotEmpty({ message: 'Title is required' })
+    @MaxLength(255)
+    title: string;
+
+    @IsString({ message: 'Description must be a string' })
+    @IsOptional()
+    description?: string;
+
+    @IsDateString({}, { message: 'Date must be a valid string date' })
+    @IsNotEmpty({ message: 'Date is required' })
+    date: string;
+
+    @IsString({ message: 'Location must be a string' })
+    @IsNotEmpty({ message: 'Location is required' })
+    @MaxLength(255)
+    location?: string;
+    
+    @IsInt()
+    @Min(1, { message: 'Capacity must be at least 1' })
+    capacity: number;
+
+    @IsInt()
+    @Min(0, { message: 'Price must be a positive integer' })
+    @IsOptional()
+    price: number;
+
+}
