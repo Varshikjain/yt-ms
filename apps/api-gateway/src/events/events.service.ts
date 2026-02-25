@@ -80,7 +80,7 @@ export class EventsService {
     data: UpdateEventDto,
     userId: string,
     userRole: string,
-  ): Promise<any> {
+  ) {
     try {
       const response = await firstValueFrom(
         this.httpService.put<any>(
@@ -102,7 +102,7 @@ export class EventsService {
     id: string,
     userId: string,
     userRole: string,
-  ): Promise<any> {
+  ) {
     try {
       const response = await firstValueFrom(
         this.httpService.post<any>(
@@ -124,7 +124,7 @@ export class EventsService {
     id: string,
     userId: string,
     userRole: string,
-  ): Promise<any> {
+  ) {
     try {
       const response = await firstValueFrom(
         this.httpService.post<any>(
